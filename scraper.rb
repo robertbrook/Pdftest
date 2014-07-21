@@ -1,6 +1,12 @@
 # This is a template for a Ruby scraper on Morph (https://morph.io)
 # including some code snippets below that you should find helpful
 
+require 'open-uri'
+
+io     = open('http://www.lordswhips.org.uk/download.axd?id=53c6222398f941118c7f3fc2')
+reader = PDF::Reader.new(io)
+puts reader.info
+
 # require 'scraperwiki'
 # require 'mechanize'
 #
