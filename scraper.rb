@@ -9,12 +9,10 @@ reader = PDF::Reader.new(io)
 puts reader.info
 
 reader.pages.each do |page|
-  puts page.fonts
   puts page.text
-  puts page.raw_content
 end
 
-
+puts "ok"
 # require 'scraperwiki'
 # require 'mechanize'
 #
