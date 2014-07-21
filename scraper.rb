@@ -8,7 +8,12 @@ io     = open('http://www.lordswhips.org.uk/download.axd?id=53c6222398f941118c7f
 reader = PDF::Reader.new(io)
 puts reader.info
 
-puts reader.text
+reader.pages.each do |page|
+  puts page.fonts
+  puts page.text
+  puts page.raw_content
+end
+
 
 # require 'scraperwiki'
 # require 'mechanize'
