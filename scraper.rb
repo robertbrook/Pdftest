@@ -2,6 +2,7 @@
 # including some code snippets below that you should find helpful
 
 require 'open-uri'
+require 'pdf-reader'
 
 io     = open('http://www.lordswhips.org.uk/download.axd?id=53c6222398f941118c7f3fc2')
 reader = PDF::Reader.new(io)
